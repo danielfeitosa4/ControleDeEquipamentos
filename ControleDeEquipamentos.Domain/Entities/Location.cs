@@ -5,7 +5,9 @@ namespace ControleDeEquipamentos.Domain.Entities
     public class Location : BaseEntity
     {
         public string Name { get; private set; } = null!;
+        public int SectorId { get; private set; }
+        public Sector Sector { get; private set; } = null!;
 
-        public ICollection<Sector> Sectors { get; set; } = new HashSet<Sector>();
+        public ICollection<Equipment> Equipments { get; set; } = new HashSet<Equipment>();
     }
 }
